@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Brick It!</title>
+    <link rel="icon" href="./logo.png" />
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>Brick</h1>
+      <img src="./logo.png" alt="logo" />
+      <h1>It!</h1>
+    </div>
+
+    <div class="game-container">
+      <div class="control-container">
+        <button id="btn-start" onclick="startGame()">New Game</button>
+        <button id="btn-restart" onclick="restartGame()">Restart Game</button>
+        <button id="btn-mode" onclick="changeGameMode()">Dark Mode</button>
+        <select name="gameLevel" id="game-level" onchange="onLevelChange(this)">
+          <option value="level1">Level 1</option>
+          <option value="level2">Level 2</option>
+          <option value="level3">Level 3</option>
+        </select>
+      </div>
+      <canvas id="game-canvas" width="480" height="320"></canvas>
+    </div>
+
+    <div class="info-container" id="info">
+      <h3></h3>
+    </div>
+    <script src="./game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.game-container {
+  display: flex;
+  justify-content: center;
+}
+canvas {
+  background-color: #eee;
+}
+.info-container {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+  color: #065f8a;
+}
+button,
+select {
+  background-color: #065f8a;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 0;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#btn-restart {
+  display: none;
+}
+.control-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.title-container img {
+  width: 80px;
+}
+.title-container h1 {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #065f8a;
+}
+@media screen and (max-width: 576px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .control-container {
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .control-container button {
+    margin-right: 10px;
+  }
+  canvas {
+    width: 100%;
+  }
+}
