@@ -274,11 +274,20 @@ function onLevelChange(e) {
 //   }
 // }
 
+function onTouchMove(e) {
+  const relativeX = e.touches[0].clientX;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
+}
+
 // Event Listeners for keyup and keydown events
 document.addEventListener('keydown', onKeyDown);
 document.addEventListener('keyup', onKeyUp);
 // Event listener for mouse move
 document.addEventListener('mousemove', onMouseMove);
+// Event listener for touch move
+document.addEventListener('touchmove', onTouchMove);
 // Event listener for window resize
 // window.addEventListener('resize', onResize);
 initializeGameSet();
